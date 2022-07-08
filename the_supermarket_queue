@@ -1,0 +1,5 @@
+function queueTime(customers, n) {
+    let till[n];
+    let nextCustomer = 0;
+  for (i = 0, i < n; i++)
+}
