@@ -1,5 +1,13 @@
 function queueTime(customers, n) {
-    let till[n];
-    let nextCustomer = 0;
-  for (i = 0, i < n; i++)
+  let time = new Array(n).fill(0);
+  for (let t of customers) {
+    console.log(t);
+    let till = time.indexOf(Math.min(...time));
+    console.log("till: ", till);
+    time[till] += t;
+    console.log("total time: ", time[till]);    
+  }
+  return Math.max(...time);
 }
+
+queueTime([10,2,3,3], 2)
